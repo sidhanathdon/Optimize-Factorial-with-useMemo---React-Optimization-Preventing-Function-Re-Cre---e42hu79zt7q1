@@ -11,8 +11,6 @@ export default function Home() {
                 <h2>Factorial Calculation</h2>
                 <input 
                     type="number" 
-                    
-                   } 
                 />
        
                 <FactorialComponent  />
