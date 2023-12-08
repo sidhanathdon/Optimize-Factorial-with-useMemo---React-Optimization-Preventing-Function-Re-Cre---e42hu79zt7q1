@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import FactorialComponent from '../components/FactorialComponent';
 export default function Home() {
-  
+  const [num,setNum]=useState(1);
      
   return (
     <div>
@@ -11,9 +11,13 @@ export default function Home() {
                 <h2>Factorial Calculation</h2>
                 <input 
                     type="number" 
+                    value={num}
+                    onChange={(e)=>{
+                        setNum(e.target.value);
+                    }}
                 />
        
-                <FactorialComponent  />
+                <FactorialComponent  num={num}/>
             </section>
     </div>
 );
